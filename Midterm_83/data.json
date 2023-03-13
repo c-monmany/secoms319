@@ -1,13 +1,13 @@
 [
     {
         "foodItem": "Peanut Butter Masala", 
-        "foodImage": "./images/Peanut Butter Masala.jpg",
+        "foodImage": "./images/Paneer_butter_80.jpg",
         "description": "Cottage cheese (paneer) is cood in a thick, buttery tomato-based stew that is spiced with cumin,coriander tumeric, and a dash of garam masala",
         "price": "$14.99"
     },
     { 
         "foodItem": "Palak Paneer", 
-        "foodImage": "./images/Palak Paneer.jpg",
+        "foodImage": "./images/Palake Paneer.jpg",
         "description": "The spinach is combined and boiled with ginger, garlic, and other spices. Mixture is then enhanced with paneer cubes",
         "price": "$14.99"
     },
