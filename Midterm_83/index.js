@@ -30,10 +30,6 @@ fetch('./data.json')
 })
 
 
-
-
-
-
 const buttons = document.querySelectorAll("[data-slideshow-button]");
 
 buttons.forEach(button => {
