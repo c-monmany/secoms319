@@ -77,8 +77,8 @@ app.post("/insert", async (req, res) => {
 app.put("/update", async (req, res) => {
     console.log(req.body);
     const id = req.params.id;
-    const query = { _id: id };
+    const query = { newRating };
     const oneProduct = await Product.findOne(query);
-    // oneProduct.price = newPrice;
-    resp.send(oneProduct);
+    oneProduct.rating = newRating;
+    res.send(oneProduct);
 })
