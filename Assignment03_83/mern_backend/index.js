@@ -7,6 +7,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use(express.static("public"));
+app.use("/images", express.static("images"));
+
 mongoose.connect("mongodb://127.0.0.1:27017/reactdata",
     {
         dbName: "reactdata",
@@ -72,13 +75,29 @@ app.post("/insert", async (req, res) => {
         image: pimage,
         rating: { rate: prate, count: pcount },
     })
+
+    try {
+        await Product.create(formData);
+        const messageResponse = { message: `Product ${p_id} added correctly` };
+        res.send(JSON.stringify(messageResponse));
+    } catch (err) {
+        console.log("Error while adding a new product:" + err);
+    }
 });
 
 app.put("/update", async (req, res) => {
-    console.log(req.body);
-    const id = req.params.id;
-    const query = { newRating };
-    const oneProduct = await Product.findOne(query);
-    oneProduct.rating = newRating;
-    res.send(oneProduct);
-})
+
+    try {
+        const updatedProduct = req.body;
+        const query = { _id: updatedProduct._id };
+        await Product.findOneAndUpdate(query, updatedProduct, { new: true });
+        const messageResponse = {
+          message: `Product ${updatedProduct._id} updated correctly`};
+        res.send(JSON.stringify(messageResponse));
+      } 
+      catch (err) {
+        console.log("Error while updating product: " + err);
+      }
+});
+
+

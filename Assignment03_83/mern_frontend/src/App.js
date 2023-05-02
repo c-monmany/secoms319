@@ -4,15 +4,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'; // import Bootstrap JavaScript file
 import { Container, Row, Col } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 
-import {
-  Nav,
-  Button,
-  Form,
-  Card,
-  InputGroup,
-  FormControl,
-  FormGroup,
-} from "react-bootstrap";
+
 
 import { useState, useEffect } from "react";
 function App() {
@@ -72,11 +64,11 @@ function App() {
     function handleChange(evt) {
         const value = evt.target.value;
         if (evt.target.name === "_id") {
-            setAddNewProduct({ ...addNewProduct, _id: value });
+            setAddNewProduct({ ...addNewProduct, _id: parseInt(value) });
         } else if (evt.target.name === "title") {
             setAddNewProduct({ ...addNewProduct, title: value });
         } else if (evt.target.name === "price") {
-            setAddNewProduct({ ...addNewProduct, price: value });
+            setAddNewProduct({ ...addNewProduct, price: parseFloat(value) });
         } else if (evt.target.name === "description") {
             setAddNewProduct({ ...addNewProduct, description: value });
         } else if (evt.target.name === "category") {
@@ -90,7 +82,7 @@ function App() {
             const temp = addNewProduct.rating.rate;
             setAddNewProduct({
                 ...addNewProduct,
-                rating: { rate: temp, count: value },
+                rating: { rate: parseFloat(temp), count: parseInt(value) },
             });
         }
     }
@@ -115,6 +107,9 @@ function App() {
 
     function getOneProduct(id) {
         console.log(id);
+        if (id == '' || (id >= 1 && id <= 20)) {
+              setViewer2(false);
+        }
         if (id >= 1 && id <= 20) {
             fetch("http://localhost:4000/" + id)
                 .then((response) => response.json())
@@ -125,8 +120,12 @@ function App() {
                     dataArr.push(data);
                     setOneProduct(dataArr);
                 });
-            setViewer2(!viewer2);
+        
+            setViewer2(true);
+            console.log(viewer2);
         } else {
+            setOneProduct([]);
+            setViewer2(false);
             console.log("Wrong number of Product id.");
         }
     }
