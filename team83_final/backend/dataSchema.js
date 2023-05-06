@@ -11,18 +11,5 @@ const foodSchema = new mongoose.Schema({
 );
 
 
-const userSchema = new monngoose.Schema({
-    _id: {type: Number},
-    username: {type: String},
-    password: {type: String},
-    orders: [foodSchema],
-    loggedIn: {type: Boolean}
-});
-
-const User = mongoose.model("User", userSchema);
-
 const Product = mongoose.model("Product", foodSchema);
-module.exports = {
-    Product,
-    User
-}
+module.exports = Product
