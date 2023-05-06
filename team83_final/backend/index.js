@@ -30,7 +30,5 @@ app.get("/", async (req, res) => {
 });
 
 
-app.post("/signup", async (req, res) => {
-    
-})
+
 
