@@ -1,33 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import FoodCarousel from './FoodCarousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavbarComponent from './components/Navbar';
+import { Container } from 'react-bootstrap';
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Cancel from './pages/Cancel';
+import Cart from './pages/Cart';
+import Success from './pages/Success';
+import CartProvider from './CartContext';
+
 
 function App() {
   return (
-    <div className="App">
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">
-            <img
-              alt=""
-              src="./myotherimages/Bombay_Deli-removebg-preview.png"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{' '}
-            Bombay Deli
-          </Navbar.Brand>
-        </Container>
-      </Navbar>
-      <Container>
-        <FoodCarousel />
-      </Container>
-      
+    <CartProvider>
+    <Container>
+    <NavbarComponent></NavbarComponent>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Cart />} />
+        <Route path="success" element={<Success />} />
+        <Route path="cancel" element={<Cancel />} />
 
-    </div>
-    
+      </Routes>
+    </BrowserRouter>
+    </Container>
+    </CartProvider>
   );
 }
 
