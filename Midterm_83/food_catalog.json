@@ -1,0 +1,54 @@
+[{
+  "_id": 1,
+  "name": "Palak Paneer",
+  "image": "http://127.0.0.1:4000/images/Palake Paneer.jpg",
+  "description": " is a spinach based gravy combined and boiled with ginger, garlic, and other aeromatics and spices. The mixture is then enhanced with paneer cubes. Includes 2 naan (bread)",
+  "price": 14.99
+},{
+  "_id": 2,
+  "name": "Panner Butter Masala",
+  "image": "http://127.0.0.1:4000/images/Paneer_butter_4_70.jpg",
+  "description": " is a thick, buttery tomato-based stew that includes many spices and aeromatics including cumin, coriander, tumeric, and garam masala and then enhanced with paneer cubes. Includes 2 naan (bread)",
+  "price": 14.99
+},{
+  "_id": 3,
+  "name": "Chilly Paneer",
+  "image": "http://127.0.0.1:4000/images/chilli-paneer.jpg",
+  "description": " is paneer cubes sauted with bell peppers, ginger, garlic, and a house made chilli sauce prior which includes soy sauce, vinegar, and tomato ketchup for a tangy, spicy, and delicious sauce.",
+  "price": 11.99
+},{
+  "_id": 4,
+  "name": "Podi Dosa",
+  "image": "http://127.0.0.1:4000/images/Podi_dosa_110.jpg",
+  "description": " is a South Indian dish made with a fermented batter of rice and black lentils. The Podi is madd with a combination of lentils, chillies, and other spices as cumin, pepper, and asafoetida. Includes a onion garlic chutney",
+  "price": 14.99
+},{
+  "_id": 5,
+  "name": "Cheese Dosa",
+  "image": "http://127.0.0.1:4000/images/cheese_dosa_70.jpg",
+  "description": " is a traditional dosa with cheesy fun! Includes onion garlic chutney",
+  "price": 14.99
+},{
+  "_id": 6,
+  "name": "Schezwan Fried Rice",
+  "image": "http://127.0.0.1:4000/images/Schezwan_fried_rice_70.jpg",
+  "description": " is a popular Chinese dish prepared with fried rice and a hot, flavorful sauce made with garlic and chilli peppers. It also has bell peppers, onions, vinegar, and other spices and aeromatics to make a flavorful sauce.",
+  "price": 12.99
+},{
+  "_id": 7,
+  "name": "Egg Schezwan Fried Rice",
+  "image": "http://127.0.0.1:4000/images/Schezwan_egg_fried_rice_70.jpg",
+  "description": " is a popular Chinese dish prepared with fried rice and a hot, flavorful sauce made with garlic, chilli peppers, and a lot more spices and aeromatics which is sauted along with eggs.",
+  "price": 14.99
+},{
+  "_id": 8,
+  "name": "Tripple Schezwan",
+  "image": "http://127.0.0.1:4000/images/triple_schezwan_70.jpg",
+  "description": " is a delicious Chinese cuisine which includes spicy garlic noodles, fried rice with Manchurian balls (fried veggie balls). This dish contains bell peppers, onions, vinegar, soy sauce, and many other aeromatics and spices alone with eggs.",
+  "price": 19.99
+},{
+  "_id": 9,
+  "name": "Naan",
+  "descriptionn": "",
+  "price": 2
+}]

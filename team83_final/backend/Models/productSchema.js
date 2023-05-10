@@ -1,3 +1,4 @@
+const { Double } = require('mongodb');
 const mongoose = require('mongoose');
 
 const foodSchema = new mongoose.Schema({
@@ -11,5 +12,8 @@ const foodSchema = new mongoose.Schema({
 );
 
 
+
+
+
 const Product = mongoose.model("Product", foodSchema);
-module.exports = Product
+module.exports = Product;
